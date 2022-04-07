@@ -1,10 +1,8 @@
 package service;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
+import static org.junit.Assert.*;
 
 public class CashbackHackServiceTest {
     CashbackHackService service = new CashbackHackService();
@@ -16,7 +14,7 @@ public class CashbackHackServiceTest {
         int actual = service.remain(amount);
         int expected = 100;
 
-        assertEquals(actual, expected);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -26,7 +24,7 @@ public class CashbackHackServiceTest {
         int actual = service.remain(amount);
         int expected = 0;
 
-        assertEquals(actual,expected);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -36,7 +34,7 @@ public class CashbackHackServiceTest {
         int actual = service.remain(amount);
         int expected = 900;
 
-        assertEquals(actual,expected);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -46,7 +44,7 @@ public class CashbackHackServiceTest {
         int actual = service.remain(amount);
         int expected = 1;
 
-        assertEquals(actual,expected);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -56,7 +54,7 @@ public class CashbackHackServiceTest {
         int actual = service.remain(amount);
         int expected = 999;
 
-        assertEquals(actual,expected);
+        assertEquals(expected, actual);
     }
 
 }
